@@ -534,8 +534,7 @@ int main()
 解放関数(operator delete/delete[])に、ストレージのサイズを引数で受け取るオーバーロードが追加された。
 </p>
 
-<pre><code>
-void operator delete( void *, std::size_t ) noexcept ;
+<pre><code>void operator delete( void *, std::size_t ) noexcept ;
 void operator delete[]( void *, std::size_t ) noexcept ;
 </code></pre>
 
@@ -543,8 +542,7 @@ void operator delete[]( void *, std::size_t ) noexcept ;
 二番目のstd::size_t型の引数で、ストレージを確保した際のサイズを得ることができる。
 </p>
 
-<pre><code>
-void * operator new( std::size_t size )
+<pre><code>void * operator new( std::size_t size )
 
     // 何らかの方法でsizeバイトのストレージ確保 
     return ...
@@ -673,7 +671,6 @@ constexpr T sqrt( T s )
     }
     return x ;
 }
-
 </code></pre>
 
 <p>
@@ -1172,8 +1169,7 @@ deprecated属性なしで宣言された名前やエンティティを再宣言�
 deprecated属性の文字列リテラルの有無も、宣言ごとに変えてよい。
 </p>
 
-<pre><code>
-[[deprecated]] void f() ;
+<pre><code>[[deprecated]] void f() ;
 [[deprecated("DO NOT USE")]] void f() ; // OK
 [[deprecated("obsolete")]] void f() ; // OK
 </code></pre>
